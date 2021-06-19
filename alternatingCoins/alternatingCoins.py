@@ -14,8 +14,8 @@ def leastFlips(A):
         s2 += "1" if i % 2 else "0"
     # Use the map function to change the values in list s1 and s2 to integers
     # If you do not add the list function you will not return a list while using the map funciton
-    s1 = list(map(int, s1))
-    s2 = list(map(int, s2))
+    s1 = tuple(map(int, s1))
+    s2 = tuple(map(int, s2))
 
     # Using List comprehension, I am using the zip finction to do a side by side
     # comparison of my input list A and lists s1, s2. Then applying the sum function
@@ -30,5 +30,5 @@ def leastFlips(A):
         
             
 
-    return ans
+    return s1
 leastFlips(A)
